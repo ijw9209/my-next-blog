@@ -1,9 +1,14 @@
 import Container from '../components/Container';
+import BlogPost from '../components/BlogPost';
 
 const Blog = () => {
     return (
         <Container>
-            <div className={`text-red-500 text-lg`}>Blog</div>
+            <div className={`mt-10 flex flex-col`}>
+               <BlogPost />
+               <BlogPost />
+               <BlogPost />
+            </div>
         </Container>
     );
 }
