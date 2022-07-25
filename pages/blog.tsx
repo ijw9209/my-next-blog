@@ -21,6 +21,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     );
 }
 
+// getStaticeProps : 사전 렌더링 프로세스 동안 이 함수를 실행, 즉 빌드할 때 실행
 export const getStaticProps = async () => {
     const posts = allPosts.sort(
       (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
