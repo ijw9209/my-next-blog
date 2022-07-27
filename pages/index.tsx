@@ -6,6 +6,13 @@ import RecentPosts from '../components/RecentPosts';
 import { allPosts } from "contentlayer/generated";
 import { InferGetStaticPropsType } from "next";
 
+//InferGetStaticPropsType : 컴포넌트에 사용되는 제네릭 타입
+//getStaticProps : 호출된 함수에서 getStaticProps를 내보내면 props 를 미리 렌더링 시킴
+// getStaticProps가 필요할 때
+// 페이지에 필요한 데이터가 빌드 시에 사용가능할때
+// 모든 사용자에게 같은 데이터를 보여줄때
+// SEO를 위해 속도 빠른 페이지가 필요할때
+
 const Home:NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
     <Container>
@@ -20,10 +27,10 @@ const Home:NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>
             objectFit="cover"
             className={`rounded-3xl`}
           /> */}
-            <span
+            {/* <span
                 className={`absolute top-12 font-extrabold italic text-white text-5xl md:text-9xl text flex justify-center w-full drop-shadow-lg`}>
                 {metadata.title}
-            </span>
+            </span> */}
             </div>
             <RecentPosts posts={posts}/>
         </div>
