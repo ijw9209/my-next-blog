@@ -34,6 +34,7 @@
     color: #7AFB4C;
     padding: 8px;
     overflow: auto;
+    height : 80px;
 }
 .space {
     margin: 25px;

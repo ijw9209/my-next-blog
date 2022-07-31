@@ -1,4 +1,24 @@
 import styles from './Terminal.module.css';
+import TypeAnimation from 'react-type-animation';
+import typingdata from '../data/typingdata';
+
+
+const TypeComponent = () => {
+    const typeData = {  
+        text : typingdata.text,
+        time : typingdata.time,
+        repeat: typingdata.repeat
+    }
+
+    return (
+        <TypeAnimation
+            cursor={false}
+            sequence={[`${typeData.text}`, typeData.time, 'FrontEnd-Developer']}
+            wrapper="div"
+            repeat={typeData.repeat}
+        />
+    )
+}
 
 
 const Terminal = () => {
@@ -11,10 +31,10 @@ const Terminal = () => {
                 <span className={`${styles.circle} ${styles.yellow}`}></span>
                 <span className={`${styles.circle} ${styles.green}`}></span>
             </div>
-            <div className={styles.title}>bash -- 70x32</div>
+            <div className={styles.title}>woongbash -- 70x32</div>
         </div>
         <pre className={styles.body}>
-            commands
+            <TypeComponent/>
         </pre> 
     </div>
     );
