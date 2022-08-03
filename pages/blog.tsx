@@ -2,11 +2,17 @@ import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
 import { allPosts } from "contentlayer/generated";
 import { InferGetStaticPropsType } from "next";
+import { FaSearch } from "react-icons/fa";
+
 
 const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <Container>
             <div className={`mt-10 flex flex-col`}>
+              <div>
+                <input className={`border-2 border-cyan-200 outline-cyan-200 w-full h-10 rounded-lg`} type="text" />
+                <FaSearch />
+              </div>
               {posts.map((post) => (
                 <BlogPost
                   date={post.date}
