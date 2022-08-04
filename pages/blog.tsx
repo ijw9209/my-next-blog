@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
 import { allPosts } from "contentlayer/generated";
@@ -6,14 +7,35 @@ import { FaSearch } from "react-icons/fa";
 
 
 const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+    let [allPosts, setAllPosts] = useState(posts);
+    // let [searchVal, setSearchVal] = useState<string>('');
+    let [searchPost, setSearchPost] = useState(posts);
+
+    const searchChange = (e : React.FormEvent<HTMLInputElement>) => {
+      e.preventDefault();
+      let searchVal = e.currentTarget.value;
+
+      if(searchVal === '' || searchVal === null) {
+        setSearchPost(allPosts);
+      }else {
+        const fillterData = allPosts.filter(post => post.title.includes(searchVal));
+        setSearchPost(fillterData);
+      }
+
+    }
+    
     return (
         <Container>
             <div className={`mt-10 flex flex-col`}>
               <div>
-                <input className={`border-2 border-cyan-200 outline-cyan-200 w-full h-10 rounded-lg`} type="text" />
-                <FaSearch />
+                <input placeholder='Search...' 
+                className={`border-2 border-cyan-200 outline-cyan-200 w-full h-10 rounded-lg pl-8`} 
+                type="text"
+                onChange={searchChange}
+                />
+                <FaSearch className={`relative bottom-7 left-2.5`}/>
               </div>
-              {posts.map((post) => (
+              {searchPost.map((post) => (
                 <BlogPost
                   date={post.date}
                   title={post.title}
