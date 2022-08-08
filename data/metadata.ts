@@ -1,6 +1,6 @@
 const metadata = {
-    title: "My Blog",
-    description: "who's blog",
+    title: "GrayWoong Blog",
+    description: "GrayWoong Blog",
     author: "Woong",
 }
 

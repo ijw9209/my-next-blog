@@ -4,7 +4,7 @@ date: 2022-08-04
 description: 리액트 아이콘
 ---
 
-## 제목
+## react-icons 적용방법
 
 ```js
 npm install react-icons --save // npm
@@ -12,5 +12,23 @@ npm install react-icons --save // npm
 
 [https://react-icons.github.io/react-icons/](https://react-icons.github.io/react-icons/)
 
-- 내용 1
-- 내용 2
+- 해당 사이트로 이동하여 아이콘을 찾음
+  나는 왼쪽 메뉴에 Font Awesome을 사용하겠다
+
+해당 아이콘을 클릭하면 이름 자동복사
+
+```jsx
+import { FaGithub, FaBlog, FaInstagram } from "react-icons/fa";
+
+const Nav = () => {
+  return (
+    <>
+      <FaGithub />
+      <FaBlog />
+      <FaInstagram />
+    </>
+  );
+};
+```
+
+이와 같이 Import 하여 사용하면 된다. 간단하다.
