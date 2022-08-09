@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'beach-pattern': "url('/public/images/beach1920.jpg')"
+      }
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 }

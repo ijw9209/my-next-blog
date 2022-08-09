@@ -5,7 +5,7 @@ import metadata from '../data/metadata';
 import RecentPosts from '../components/RecentPosts';
 import { allPosts } from "contentlayer/generated";
 import { InferGetStaticPropsType } from "next";
-import Terminal from 'components/Terminal';
+// import Terminal from 'components/Terminal';
 
 //InferGetStaticPropsType : 컴포넌트에 사용되는 제네릭 타입
 //getStaticProps : 호출된 함수에서 getStaticProps를 내보내면 props 를 미리 렌더링 시킴
@@ -33,7 +33,7 @@ const Home:NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>
                 {metadata.title}
             </span> */}
             </div>
-            <Terminal />
+            {/* <Terminal /> */}
             <RecentPosts posts={posts}/>
         </div>
     </Container>

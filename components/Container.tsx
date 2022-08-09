@@ -3,6 +3,7 @@ import metadata from '../data/metadata';
 import Nav from './Nav';
 import Link from "next/link";
 import Image from 'next/image';
+import beach from '../public/images/beach1920.jpg';
 
 const Container = (props) => {
     const meta = {
@@ -13,14 +14,25 @@ const Container = (props) => {
       };
 
     return (
-        <div className={`w-full flex flex-col items-center p-3`}>
+        // p-3
+        <div className={`w-full flex flex-col items-center`}>
             <Head>
               <title>{meta.title}</title>
               <meta content={meta.description} name="description" />
               <meta property="og:site_name" content={meta.author} />
             </Head>
+            <div className={`bg-[url('/images/beach1920.jpg')] w-full h-96 `}>
+              {/* <Image 
+              src={`/images/beach1920.jpg`}
+              alt="beach"
+              width={800}
+              height={500}
+              objectFit={`cover`}
+              className={`w-full`}
+              layout={`intrinsic`}
+               /> */}
             {/*  max-w-3xl */}
-            <header className={`w-full max-w-3xl flex flex-row justify-between items-center my-1`}>
+            <header className={`flex flex-row justify-between items-center my-1 max-w-3xl p-3 m-auto `}>
                 <div className={`flex flex-row items-center`}>
                     {/* 이미지로고 영역 */}
                 <Link href="/">
@@ -41,6 +53,7 @@ const Container = (props) => {
                 </div>
                 <Nav/>
             </header>
+            </div>
             <main  className={`w-full max-w-3xl`}>{props.children}</main>
         </div>
     )
