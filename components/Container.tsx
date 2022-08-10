@@ -46,13 +46,24 @@ const Container = (props) => {
                    /> 
                 </Link>
                 <Link href="/">
-                  <span className={`cursor-pointer mx-2 font-extralight text-lg`}>
+                  <span className={`cursor-pointer mx-2 text-lg text-white font-medium	`}>
                     {metadata.title}
                   </span>
                 </Link>
                 </div>
                 <Nav/>
             </header>
+            <div className={` flex-row justify-between items-center my-1 max-w-3xl mt-12 p-3 m-auto`}>
+              <Image
+                     src={`/images/icons8-computer-96.png`}
+                     alt="로고"
+                     width={96}
+                     height={96}
+                     className={``}
+              /> 
+              <p className={`text-5xl font-medium text-white`}>{metadata.mainTitle}</p>
+              <p className={`text-1xl font-medium text-white mt-6`}>{metadata.mainDescript}</p>
+            </div>
             </div>
             <main  className={`w-full max-w-3xl`}>{props.children}</main>
         </div>
