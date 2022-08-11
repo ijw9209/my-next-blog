@@ -1,0 +1,16 @@
+.cursor {
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+}
+
+.cursor::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+}
