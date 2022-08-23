@@ -16,6 +16,7 @@ import { InferGetStaticPropsType } from "next";
 
 const Home:NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
+    <>
     <Container>
         <div className={`my-5 w-full`}>
             <div className={`relative`}>
@@ -34,9 +35,12 @@ const Home:NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>
             </span> */}
             </div>
             {/* <Terminal /> */}
+            
             <RecentPosts posts={posts}/>
         </div>
     </Container>
+      
+    </>
     );
 }
 

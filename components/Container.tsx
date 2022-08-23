@@ -32,7 +32,7 @@ const Container = (props) => {
 
     return (
         // p-3
-        <div className={`w-full flex flex-col items-center`}>
+        <div className={`w-full flex flex-col items-center h-auto min-h-full pb-52`}>
             <Head>
               <title>{meta.title}</title>
               <meta content={meta.description} name="description" />
@@ -91,6 +91,7 @@ const Container = (props) => {
             </div>
             </div>
             <main  className={`w-full max-w-3xl`}>{props.children}</main>
+            <footer className={`h-52 w-full bg-slate-100 relative translate-y-full`}></footer>
         </div>
     )
 }
