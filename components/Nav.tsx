@@ -12,13 +12,19 @@ const Nav = () => {
         </Link>
       ))}
       <Link href="https://github.com/ijw9209">
-        <FaGithub className="inline cursor-pointer w-14 text-white"/>
+        <a>
+          <FaGithub className="inline cursor-pointer w-14 text-white"/>
+        </a>
       </Link>
       <Link href="https://ijw9209.github.io/">
+        <a>
         <FaBlog className="inline cursor-pointer w-14 text-white"/>
+        </a>
       </Link>
       <Link href="/">
+        <a>
         <FaInstagram className="inline cursor-pointer w-14 text-white"/>
+        </a>
       </Link>
     </nav>
   );

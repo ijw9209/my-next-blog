@@ -32,7 +32,7 @@ const Container = (props) => {
 
     return (
         // p-3
-        <div className={`w-full flex flex-col items-center h-auto min-h-full pb-52`}>
+        <div className={`w-full flex flex-col items-center h-auto min-h-full pb-36`}>
             <Head>
               <title>{meta.title}</title>
               <meta content={meta.description} name="description" />
@@ -76,7 +76,7 @@ const Container = (props) => {
                      alt="로고"
                      width={96}
                      height={96}
-                     className={``}
+                     
               /> 
               {/* <TypeAnimation 
                 // sequence={[metadata.mainTitle, 2000]}
@@ -91,7 +91,13 @@ const Container = (props) => {
             </div>
             </div>
             <main  className={`w-full max-w-3xl`}>{props.children}</main>
-            <footer className={`h-52 w-full bg-slate-100 relative translate-y-full`}></footer>
+            <footer className={`h-36 w-full bg-slate-100 relative translate-y-full`}>
+              <div className={`text-center mt-10 font-light text-sm`}>
+                <p>Copyright © Jae Woong Lee</p>
+                <p className={`mt-4 text-xs`}>Email : ijw9209@naver.com</p>
+              </div>
+
+            </footer>
         </div>
     )
 }
