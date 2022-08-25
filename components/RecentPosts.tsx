@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import dateFormat from '../modules/dateFormat';
+
 const RecentPosts = ({ posts }) => {
     return (
       <section className={`mt-10`}>
@@ -12,9 +14,10 @@ const RecentPosts = ({ posts }) => {
               passHref
             >
               <a className="mt-5">
-                <div className={`font-medium text-xl`}>{post.title}</div>
-                <div className={`font-light`}>{post.description}</div>
-                <div>{(post.date).substring(0,10)}</div> 
+                <div className={`font-medium text-xl my-1.5`}>{post.title}</div>
+                <div className={`font-light my-1.5`}>{post.description}</div>
+                {/* <div>{(post.date).substring(0,10)}</div>  */}
+                <div className={`text-sm mt-1.5 text-slate-500`}>{dateFormat(post.date)}</div> 
               </a>
             </Link>
           ))}
