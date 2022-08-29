@@ -6,6 +6,7 @@ import { InferGetStaticPropsType } from "next";
 import { FaSearch } from "react-icons/fa";
 
 
+
 const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     let [allPosts, setAllPosts] = useState(posts);
     // let [searchVal, setSearchVal] = useState<string>('');
@@ -29,7 +30,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
             <div className={`mt-10 flex flex-col`}>
               <div>
                 <input placeholder='Search...' 
-                className={`border-2 border-cyan-200 outline-cyan-200 w-full h-10 rounded-lg pl-8`} 
+                className={`border-2 w-7/12 h-10 rounded-lg pl-8`} 
                 type="text"
                 onChange={searchChange}
                 />

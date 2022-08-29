@@ -90,7 +90,12 @@ const Container = (props) => {
               <p className={`text-1xl font-medium text-white mt-6`}>{metadata.mainDescript}</p>
             </div>
             </div>
-            <main  className={`w-full max-w-3xl`}>{props.children}</main>
+            <div className={`w-full flex `}>
+            <section className={`float-left w-1/4 mt-10 ml-2`}>
+              섹션 영역
+            </section>
+            <main  className={`w-3/4 float-right`}>{props.children}</main>
+            </div>
             <footer className={`h-36 w-full bg-slate-100 relative translate-y-full`}>
               <div className={`text-center mt-10 font-light text-sm`}>
                 <p>Copyright © Jae Woong Lee</p>
